@@ -1101,27 +1101,6 @@ export default function (options) {
         maxHevcLevel = 123;
     }
 
-    // hevc main10 level 4.1
-    if (videoTestElement.canPlayType('video/mp4; codecs="hvc1.2.4.L123"').replace(/no/, '')
-            || videoTestElement.canPlayType('video/mp4; codecs="hev1.2.4.L123"').replace(/no/, '')) {
-        maxHevcLevel = 123;
-        hevcProfiles = 'main|main 10';
-    }
-
-    // hevc main10 level 5.1
-    if (videoTestElement.canPlayType('video/mp4; codecs="hvc1.2.4.L153"').replace(/no/, '')
-            || videoTestElement.canPlayType('video/mp4; codecs="hev1.2.4.L153"').replace(/no/, '')) {
-        maxHevcLevel = 153;
-        hevcProfiles = 'main|main 10';
-    }
-
-    // hevc main10 level 6.1
-    if (videoTestElement.canPlayType('video/mp4; codecs="hvc1.2.4.L183"').replace(/no/, '')
-            || videoTestElement.canPlayType('video/mp4; codecs="hev1.2.4.L183"').replace(/no/, '')) {
-        maxHevcLevel = 183;
-        hevcProfiles = 'main|main 10';
-    }
-
     let maxAv1Level = 15; // level 5.3
     const av1Profiles = 'main'; // av1 main covers 4:2:0 8 & 10 bits
 
